@@ -7,9 +7,6 @@ public class Weather {
     private String generalDescription;
     private int uvIndex;
 
-    public Weather() {
-    }
-
     public int getTemperature() {
         return temperature;
     }

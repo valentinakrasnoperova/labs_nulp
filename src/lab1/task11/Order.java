@@ -40,7 +40,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order:" + "\n" +
-                "listOfCustomers: " + "\n" + listOfCustomers +
+                "listOfCustomers: " + listOfCustomers +
                 ", listOfDrivers: " + "\n" + listOfDrivers +
                 ", listOfCars: " + "\n" + listOfCars +
                 '}';

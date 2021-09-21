@@ -28,7 +28,7 @@ public class Customer extends Order {
 
     @Override
     public String toString() {
-        return "Customer" +"\n"+"order number : "+orderNumber+
+        return "\n"+"Customer" +"\n"+"order number : "+orderNumber+
                 ", phone is: " + phone + '\'' +
                 ", name is: " + name + '\'' +
                 '.';

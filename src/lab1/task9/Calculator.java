@@ -35,24 +35,21 @@ public class Calculator {
         CustomDouble customDouble1 = new CustomDouble(b);
         switch (operator) {
             case "+": {
-                customDouble.sum(customDouble1);
-                break;
+               return customDouble.sum(customDouble1).toDouble();
             }
             case "-": {
-                customDouble.difference(customDouble1);
-                break;
+                return customDouble.difference(customDouble1).toDouble();
+
             }
             case "/": {
                 if (a == 0) {
                     System.out.println("You cannot divide a number by zero!");
                     return 0;
                 }
-                customDouble.division(customDouble1);
-                break;
+                return customDouble.division(customDouble1).toDouble();
             }
             case "*": {
-                customDouble.multiplication(customDouble1);
-                break;
+                return customDouble.multiplication(customDouble1).toDouble();
             }
             default: {
                 System.out.println("You have entered athe wrong operator! ");
