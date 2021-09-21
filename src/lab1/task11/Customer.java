@@ -21,8 +21,8 @@ public class Customer {
     }
 
     Customer(String phone, String name) {
-        this.phone = getPhone();
-        this.name = getName();
+        this.phone = phone;
+        this.name = name;
     }
 
     @Override

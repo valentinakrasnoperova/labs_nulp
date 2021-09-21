@@ -21,8 +21,8 @@ public class Driver {
     }
 
     Driver(String ID, String name) {
-        this.ID = getID();
-        this.name = getName();
+        this.ID = ID;
+        this.name = name;
     }
 
     @Override
