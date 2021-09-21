@@ -18,7 +18,11 @@ public class Order {
     }
 
     public Order(int orderNumber) {
+        this.orderNumber=orderNumber;
     }
+
+
+
 
 
     void addNewDriver(String ID, String name) {
