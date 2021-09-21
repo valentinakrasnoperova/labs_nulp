@@ -1,13 +1,13 @@
 package lab1.task11;
 
-import lab1.task7.User;
 
-public class Car {
+public class Car extends Driver{
     private int number;
     private String color;
     private String brand;
 
-    Car(int number, String color, String brand) {
+    Car(String ID, int number, String color, String brand) {
+        super(ID);
         this.number = number;
         this.color = color;
         this.brand = brand;
@@ -68,8 +68,8 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car: " +
-                "number of car: " + number +
+        return "Car: " +"Driver ID: "+"ID"+
+                ", number of car: " + number +
                 ", color of car: " + color + '\'' +
                 ", brand of car : " + brand + '\'' +
         ".";

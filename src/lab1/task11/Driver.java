@@ -4,6 +4,9 @@ public class Driver {
     private String ID;
     private String name;
 
+    public Driver(String ID) {
+    }
+
     public String getID() {
         return ID;
     }
@@ -28,7 +31,7 @@ public class Driver {
     @Override
     public String toString() {
         return "Driver: " +
-                "ID: " + ID + '\'' +
+                "driver ID: " + ID + '\'' +
                 ", name: " + name + '\'' +
                 '.';
     }

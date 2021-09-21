@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Order {
+    int orderNumber;
     List<Customer> listOfCustomers;
     List<Driver> listOfDrivers;
     List<Car> listOfCars;
@@ -16,17 +17,20 @@ public class Order {
         listOfCars = new ArrayList<>();
     }
 
+    public Order(int orderNumber) {
+    }
+
 
     void addNewDriver(String ID, String name) {
         listOfDrivers.add(new Driver(ID, name));
     }
 
-    void addNewCustomer(String phone, String name) {
-        listOfCustomers.add(new Customer(phone, name));
+    void addNewCustomer(int orderNumber, String phone, String name) {
+        listOfCustomers.add(new Customer(orderNumber, phone, name));
     }
 
-    void addNewCar(int number, String color, String brand) {
-        listOfCars.add(new Car(number, color, brand));
+    void addNewCar(String ID, int number, String color, String brand) {
+        listOfCars.add(new Car(ID, number, color, brand));
     }
 
     @Override
