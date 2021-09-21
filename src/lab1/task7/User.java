@@ -1,10 +1,10 @@
 package lab1.task7;
 
 public class User {
-    public String firstName;
-    public String lastName;
-    public String email;
-    public int age;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private int age;
 
     public User(String firstName, String lastName, String email, int age) {
         setFirstName(firstName);
