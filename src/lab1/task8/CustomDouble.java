@@ -31,8 +31,6 @@ public class CustomDouble {
         this.fractionPart = res - wholePart;
     }
 
-    public CustomDouble() {
-    }
 
 
     public CustomDouble sum(CustomDouble d) {
@@ -92,8 +90,7 @@ public class CustomDouble {
     }
 
     public double toDouble() {
-        double result = this.wholePart + this.fractionPart;
-        return result;
+        return (double) this.wholePart + this.fractionPart;
     }
 
 

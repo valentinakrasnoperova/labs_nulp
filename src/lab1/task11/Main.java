@@ -3,25 +3,20 @@ package lab1.task11;
 
 public class Main {
     public static void main(String[] args) {
-        Order order = new Order();
-        Order order1 = new Order();
-        Order order2 = new Order();
+        Car car = new Car(1234, "red", "audi");
+        Driver driver = new Driver("123", "Ivan", "3 stars");
+        Customer customer = new Customer("+380975643421", "Anna", "4 stars");
 
-        order.addNewDriver("123", "Ivan");
-        order.addNewCar("123", 3456, "red", "BMW");
-        order.addNewCustomer(1, "0976785432", "Anna");
+        Car car1 = new Car(1234, "red", "audi");
+        Driver driver1 = new Driver("123", "Ivan", "3 stars");
+        Customer customer1 = new Customer("+380975643421", "Anna", "4 stars");
 
-        order1.addNewDriver("123", "Ivan");
-        order1.addNewCar("123", 9990, "white", "BMW");
-        order1.addNewCustomer(2, "098765443", "Valia");
 
-        order2.addNewDriver("456", "Ruslan");
-        order2.addNewCar("456", 9990, "white", "BMW");
-        order2.addNewCustomer(3, "0976788882", "Masha");
-
-        System.out.println(order);
+        Order order = new Order(1, customer, car, driver);
+        Order order1 = new Order(2, customer1, car1, driver1);
+        System.out.println(order + "\n");
         System.out.println(order1);
-        System.out.println(order2);
+
     }
 
 }

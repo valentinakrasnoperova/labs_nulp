@@ -2,11 +2,18 @@ package lab1.task2;
 
 public class Main {
     public static void main(String[] args) {
-        String[] names = {"Va", "v", "v", "v", "vv", "v", "", "v", "a"};
-        int count = 0;
-        for (String str : names) {
-            count += str.length();
+        String[] str = {"Dreams", "come", "true"};
+        System.out.println(count(str, 'm'));
+    }
+
+    public static int count(String[] str, char r) {
+        int result = 0;
+        for (String s : str) {
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == r)
+                    result++;
+            }
         }
-        System.out.println("Total number is:" + count);
+        return result;
     }
 }

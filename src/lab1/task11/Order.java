@@ -1,61 +1,56 @@
 package lab1.task11;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 public class Order {
-    int orderNumber;
-    List<Customer> listOfCustomers;
-    List<Driver> listOfDrivers;
-    List<Car> listOfCars;
+    private int orderNumber;
+    private Customer customer;
+    private Driver driver;
+    private Car car;
 
-
-    Order() {
-        listOfCustomers = new ArrayList<>();
-        listOfDrivers = new ArrayList<>();
-        listOfCars = new ArrayList<>();
-    }
-
-    public Order(int orderNumber) {
+    public Order(int orderNumber, Customer customer, Car car, Driver driver) {
         this.orderNumber=orderNumber;
+        this.customer=customer;
+        this.car = car;
+        this.driver=driver;
     }
 
 
-
-
-
-    void addNewDriver(String ID, String name) {
-        listOfDrivers.add(new Driver(ID, name));
+    public int getOrderNumber() {
+        return orderNumber;
     }
 
-    void addNewCustomer(int orderNumber, String phone, String name) {
-        listOfCustomers.add(new Customer(orderNumber, phone, name));
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
-    void addNewCar(String ID, int number, String color, String brand) {
-        listOfCars.add(new Car(ID, number, color, brand));
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 
     @Override
     public String toString() {
-        return "Order:" + "\n" +
-                "listOfCustomers: " + listOfCustomers +
-                ", listOfDrivers: " + "\n" + listOfDrivers +
-                ", listOfCars: " + "\n" + listOfCars +
+        return "Order{" +
+                "orderNumber: " + orderNumber +
+                customer + driver + car +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Order)) return false;
-        Order order = (Order) o;
-        return Objects.equals(listOfCustomers, order.listOfCustomers) && Objects.equals(listOfDrivers, order.listOfDrivers) && Objects.equals(listOfCars, order.listOfCars);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(listOfCustomers, listOfDrivers, listOfCars);
     }
 }

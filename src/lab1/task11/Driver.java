@@ -1,11 +1,8 @@
 package lab1.task11;
 
-public class Driver {
+public class Driver extends Person {
     private String ID;
-    private String name;
 
-    public Driver(String ID) {
-    }
 
     public String getID() {
         return ID;
@@ -23,16 +20,14 @@ public class Driver {
         this.name = name;
     }
 
-    Driver(String ID, String name) {
+    Driver(String ID, String name, String appRate) {
+        super(name, appRate);
         this.ID = ID;
-        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "\n"+"Driver: " +
-                "driver ID: " + ID + '\'' +
-                ", name: " + name + '\'' +
-                '.';
+        return "\n" + "Driver: " + "\n" +
+                "ID" + ID + ", name: " + name + ", appRate: " + appRate;
     }
 }
