@@ -3,7 +3,7 @@ package lab1.task2;
 public class Main {
     public static void main(String[] args) {
         String[] str = {"Dreams", "come", "true"};
-        System.out.println(count(str, 'm'));
+        System.out.println("The number of elements is : "+count(str, 'm'));
     }
 
     public static int count(String[] str, char r) {
