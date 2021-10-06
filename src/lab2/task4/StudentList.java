@@ -46,7 +46,7 @@ public class StudentList {
         if (mark == null) {
             return 0;
         }
-        return (int) mark;
+        return mark;
     }
 
     public Map<String, Integer> getMarks(String subject) {
@@ -68,14 +68,6 @@ public class StudentList {
         }
         return result;
     }
-
-    public void getBestStudent() {
-        final String bestStudentId = getBestStudentId();
-        System.out.print(bestStudentId + ": ");
-        subjects.stream().map(subject -> subject + "=" + getMark(subject, bestStudentId) + " ").forEach(System.out::print);
-        System.out.println();
-    }
-
     public String getBestStudentId() {
         int currentMax=-1;
         int currentSum;
@@ -90,4 +82,13 @@ public class StudentList {
         }
         return bestStudent.getId();
     }
+
+    public void getBestStudent() {
+        final String bestStudentId = getBestStudentId();
+        System.out.print(bestStudentId + ": ");
+        subjects.stream().map(subject -> subject + "=" + getMark(subject, bestStudentId) + " ").forEach(System.out::print);
+        System.out.println();
+    }
+
+
 }

@@ -21,7 +21,7 @@ public class Main {
         studentList.setMark("History", "123", 5);
         studentList.setMark("History", "124", 5);
 
-        System.out.println("All students' info: ");
+        System.out.println("All students info: ");
         studentList.fetchAllStudents();
         System.out.println();
 
