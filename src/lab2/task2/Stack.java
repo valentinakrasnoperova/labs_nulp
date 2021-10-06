@@ -55,12 +55,23 @@ public class Stack implements Iterable<Node> {
         return top == null;
     }
 
+    @Override
+    public String toString() {
+        String result = "[ ";
+        while (top != null) {
+            result += top.getData() + ", ";
+            top = top.getNext();
+        }
+        result += "]";
+        return result;
+    }
+
     class MyIterator implements Iterator<Node> {
         public boolean hasNext() {
             if (current == null) {
                 current = top;
             } else {
-                current = current.next;
+                current = current.getNext();
             }
             return (current != null);
         }
@@ -75,14 +86,4 @@ public class Stack implements Iterable<Node> {
         return new MyIterator();
     }
 
-    @Override
-    public String toString() {
-        String result = "[ ";
-        while (top != null) {
-            result += top.getData() + ", ";
-            top = top.getNext();
-        }
-        result += "]";
-        return result;
-    }
 }

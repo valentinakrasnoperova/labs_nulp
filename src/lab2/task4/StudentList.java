@@ -80,7 +80,7 @@ public class StudentList {
                 bestStudent = student;
             }
         }
-        return bestStudent.getId();
+        return Objects.requireNonNull(bestStudent).getId();
     }
 
     public void getBestStudent() {
