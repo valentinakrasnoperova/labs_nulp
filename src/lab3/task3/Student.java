@@ -5,18 +5,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Student {
+    private final  String name;
+    private final String surname;
+    private final String fatherName;
+    private final List<Subject> subject;
+    private final List<Mark> marks;
     static long idStatic = 0;
-    private long id;
-    private String name;
-    private String surName;
-    private String fatherName;
-    private List<Subject> subject;
-    private List<Mark> marks;
+    private final long id;
 
 
-    public Student(final String name, final String surName, final String fatherName, final List<Subject> subject) {
+
+    public Student(final String name, final String surname, final String fatherName, final List<Subject> subject) {
         this.name = name;
-        this.surName = surName;
+        this.surname = surname;
         this.fatherName = fatherName;
         this.subject = subject;
         this.marks = setMarkSubject();
@@ -41,8 +42,8 @@ public class Student {
         return name;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
     String getFatherName() {
@@ -97,7 +98,7 @@ public class Student {
     public String toString() {
         return "ID = " + this.getId() +
                 " Name = " + this.getName() +
-                " Surname = " + this.getSurName() +
+                " surname = " + this.getSurname() +
                 " FatherName = " + this.getFatherName();
     }
 }

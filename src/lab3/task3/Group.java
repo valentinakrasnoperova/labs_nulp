@@ -23,8 +23,8 @@ public class Group {
     public List<Student> sortingByName() {
         return students.stream()
                 .sorted((o1, o2) -> {
-                    if (o1.getSurName() != o2.getSurName())
-                        return o1.getSurName().compareTo(o2.getSurName());
+                    if (o1.getSurname() != o2.getSurname())
+                        return o1.getSurname().compareTo(o2.getSurname());
                     else if (o1.getName() != o2.getName())
                         return o1.getName().compareTo(o2.getName());
                     else return o1.getFatherName().compareTo(o2.getFatherName());
@@ -33,7 +33,7 @@ public class Group {
 
     public String printSurnames() {
         return students.stream()
-                .map(Student::getSurName)
+                .map(Student::getSurname)
                 .reduce((s1, s2) -> s1 + "-" + s2).orElse("No");
     }
 
@@ -43,7 +43,7 @@ public class Group {
         String res = "";
         for (final Student student : students) {
             res += "Student { " + "name= " + student.getName() +
-                    ", surName= " + student.getSurName();
+                    ", surName= " + student.getSurname();
             for (final Subject subject : student.getSubject()) {
                 res += ", subject= " + subject.getNameSubject() + "{ ";
                 for (final Integer txt : student.getMarks().get(student.getSubject().indexOf(subject)).getMark())

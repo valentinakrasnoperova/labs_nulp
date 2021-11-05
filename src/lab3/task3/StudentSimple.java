@@ -13,7 +13,7 @@ public class StudentSimple {
 
     public StudentSimple(final Student students) {
         this.name = students.getName();
-        this.surname = students.getSurName();
+        this.surname = students.getSurname();
         this.id = students.getId();
     }
 
