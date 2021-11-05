@@ -30,7 +30,7 @@ public class Main {
 
 
         final StudentSimple studentSimples = new StudentSimple();
-        studentSimples.transformationList(students);
+        studentSimples.transformed(students);
 
         students.get(0).addMark(4, "Math");
         students.get(1).addMark(2, "Math");

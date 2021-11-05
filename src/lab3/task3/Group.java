@@ -43,7 +43,7 @@ public class Group {
         String res = "";
         for (final Student student : students) {
             res += "Student { " + "name= " + student.getName() +
-                    ", surName= " + student.getSurname();
+                    ", surname= " + student.getSurname();
             for (final Subject subject : student.getSubject()) {
                 res += ", subject= " + subject.getNameSubject() + "{ ";
                 for (final Integer txt : student.getMarks().get(student.getSubject().indexOf(subject)).getMark())
