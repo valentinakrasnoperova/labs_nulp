@@ -35,7 +35,7 @@ public class Group {
     public String printSurnames() {
         return students.stream()
                 .map(Student::getSurname)
-                .reduce((s1, s2) -> s1 + "-" + s2).orElse("No");
+                .reduce((s1, s2) -> s1 + "-" + s2).orElse("-");
     }
 
 
