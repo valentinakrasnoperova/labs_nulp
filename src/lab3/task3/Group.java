@@ -1,5 +1,6 @@
 package lab3.task3;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class Group {
@@ -23,9 +24,9 @@ public class Group {
     public List<Student> sortingByName() {
         return students.stream()
                 .sorted((o1, o2) -> {
-                    if (o1.getSurname() != o2.getSurname())
+                    if (!Objects.equals(o1.getSurname(), o2.getSurname()))
                         return o1.getSurname().compareTo(o2.getSurname());
-                    else if (o1.getName() != o2.getName())
+                    else if (!Objects.equals(o1.getName(), o2.getName()))
                         return o1.getName().compareTo(o2.getName());
                     else return o1.getFatherName().compareTo(o2.getFatherName());
                 }).collect(Collectors.toList());
