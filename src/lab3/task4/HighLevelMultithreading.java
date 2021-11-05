@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class HighLevelMultithreading {
     public static void main(final String[] args) {
-        final ExecutorService executor = Executors.newFixedThreadPool(3);
+        final ExecutorService executor = Executors.newFixedThreadPool(2);
         executor.submit(()->Calculator.sum(8,9));
         executor.submit(()->Calculator.dif(16,5));
 
